@@ -1,0 +1,25 @@
+[debug] [2022-09-27T14:09:54.536Z] ----------------------------------------------------------------------
+[debug] [2022-09-27T14:09:54.538Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\migotto\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-09-27T14:09:54.538Z] CLI Version:   11.10.0
+[debug] [2022-09-27T14:09:54.538Z] Platform:      win32
+[debug] [2022-09-27T14:09:54.538Z] Node Version:  v16.17.0
+[debug] [2022-09-27T14:09:54.539Z] Time:          Tue Sep 27 2022 11:09:54 GMT-0300 (Horário Padrão de Brasília)
+[debug] [2022-09-27T14:09:54.539Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-09-27T14:09:54.545Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-09-27T14:09:54.545Z] > authorizing via signed-in user (andremigotto98@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\fiap\gadfly\gadfly-app
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
