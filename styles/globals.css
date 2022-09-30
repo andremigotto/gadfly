@@ -260,3 +260,68 @@ input[type="file"] {
 }
 
 .hidden { display:  none; }
+
+ /*UserProfile.js*/ 
+
+.caixona{
+  display: grid; 
+	grid-template: auto 1fr / auto 1fr auto;
+  background: #8CCBAD;
+}
+
+.caixa-escura-vertical{
+  width: 42px;
+  height: auto;
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.caixa-escura-horizontal {
+  width: auto;
+  height: 70px;
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.barra-branca {
+  width: auto;
+  margin: 1.5%;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transform: rotate(-0.1deg);
+}
+
+.box-center-profile {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+  background: #8CCBAD;
+}
+
+.ach-box {
+  display: inline-block;
+  vertical-align: middle;
+  width: 75%;
+  margin-top: 3%;
+  background-color: #8CCBAD;
+  border-style: solid;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.achv-icon {
+  width:5%;
+  display:block;
+  margin:auto;
+  border-radius: 10%;
+  transition: transform .2s;
+}
+
+.achv-icon:hover {
+  transform: scale(1.25);
+}
+
+.ach-desc-box {
+  width: 340px;
+  margin: 2%;
+  display:block;
+  border-style: dashed;
+}
