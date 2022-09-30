@@ -4,7 +4,7 @@ export default function HomePage({ materia }) {
   return (
     <main>
       <div className="box-center">
-        <Link href="/exam">
+        <Link href="/chapter">
             <button className="btn-green">Quimica</button>
         </Link>
       </div>
