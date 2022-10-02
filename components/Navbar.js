@@ -36,8 +36,11 @@ export default function Navbar() {
             </li>
             <li>
               <Link href={`/${username}`}>
-                <img src={user?.photoURL} />
+                <img src={user?.photoURL}/>
               </Link>
+            </li>
+            <li className="push-right">
+                <p className="btn-blue">{user.displayName}</p>
             </li>
           </>
         )}

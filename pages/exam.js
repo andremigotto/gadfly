@@ -1,3 +1,4 @@
+import Link from "next/link";
 import toast from "react-hot-toast";
 import { getMateria } from "../lib/firebase";
 
@@ -40,12 +41,28 @@ export default function ExamPage({ questoes, respostas }) {
   let listaResposta = Object.keys(respostas[subContador])
   let listaValidacao = Object.values(respostas[subContador])
   let alternativa = null
+  let resultado = null
 
-  function validaResposta(resposta, id) {
+  function validaResposta(resposta) {
     if(listaValidacao[resposta] == true) {
-      const validacao = "sucesso"
-      return validacao
+      return true
     }
+    return false
+  }
+
+  function confirmaResposta(alternativa){
+    const validacao = validaResposta(alternativa)
+    const textoResposta = textoResp(validacao)
+    return textoResposta
+  }
+
+  function textoResp(validacao) {
+    if(validacao == true) {
+      const texto = "Parabéns, você acertou! ✔"
+      return texto
+    }
+    const texto =  "Você errou, tente de novo! ❌"
+    return texto
   }
   
   //Funcao de escrever algo onde o Element ID é demo
@@ -72,50 +89,29 @@ export default function ExamPage({ questoes, respostas }) {
   <div className="pergunta-box">
     <div className="pergunta-box-img-area"><img src={'/Professor_Soren_Peter_parado.png'} id="proff" className="pergunta-box-img"
       onClick={() => animacao()}/></div>
-    <div className="pergunta-box-text-area"><div className="pergunta-box-text" id="pergunta">pergnta aqui</div></div>
+    <div className="pergunta-box-text-area"><div className="pergunta-box-text" id="pergunta">{listaPerguntas}</div></div>
   </div>
 
     
   <div className="Cartao">
     <div className="Cartao-alternativas">
       <h3 className="anuncio-alternativas">Alternativas</h3>
-      <div className="cartao-alternativas-selector" onClick={typeWriter}><p className="testo-alternativas">a)</p></div>
-      <div className="cartao-alternativas-selector" onClick={typeWriter}><p className="testo-alternativas">b)</p></div>
-      <div className="cartao-alternativas-selector" onClick={typeWriter}><p className="testo-alternativas">c)</p></div>
-      <div className="cartao-alternativas-selector" onClick={typeWriter}><p className="testo-alternativas">d)</p></div>
+      <div className="cartao-alternativas-selector" onClick={() => alternativa = 0}><p className="testo-alternativas">a) {listaResposta[contadorAlternativas ++]}</p></div>
+      <div className="cartao-alternativas-selector" onClick={() => alternativa = 1}><p className="testo-alternativas">b) {listaResposta[contadorAlternativas ++]}</p></div>
+      <div className="cartao-alternativas-selector" onClick={() => alternativa = 2}><p className="testo-alternativas">c) {listaResposta[contadorAlternativas ++]}</p></div>
+      <div className="cartao-alternativas-selector" onClick={() => alternativa = 3}><p className="testo-alternativas">d) {listaResposta[contadorAlternativas ++]}</p></div>
     </div>
-    <div className="Cartao-divisoria"><button className="botao-confirmar-resposta">➡</button></div>
+    <div className="Cartao-divisoria">
+    <Link href={"/exam"}>
+      <button onClick={() => toast(confirmaResposta(alternativa), {
+        icon: '📚',
+      })} className="botao-confirmar-resposta">➡</button>
+    </Link>
+    </div>
     <div className="Cartao-xp">
-      <div className="explicacao_pergunta"><h5 className="testo-explicacao" id="demo"></h5></div>
+      <div id="explicacao" className="explicacao_pergunta"><h5 className="testo-explicacao" id="demo"></h5></div>
     </div>
   </div>
   </div>
-
-
-
-
-
-
-
-    // <main>
-    //   <div className="box-center">
-    //     <h3>{listaPerguntas}</h3>
-    //         <button variant="outline-primary" active onClick={() => alternativa = validaResposta(0, "a")}>
-    //           {listaResposta[contadorAlternativas ++]}
-    //         </button>
-    //         <button variant="outline-primary" active onClick={() => alternativa = validaResposta(1, "b")}>
-    //           {listaResposta[contadorAlternativas ++]}
-    //         </button>
-    //         <button variant="outline-primary" active onClick={() => alternativa = validaResposta(2, "c")}>
-    //           {listaResposta[contadorAlternativas ++]}
-    //         </button>
-    //         <button variant="outline-primary" active onClick={() => alternativa = validaResposta(3, "d")}>
-    //           {listaResposta[contadorAlternativas ++]}
-    //         </button>
-    //         <button id="specialbutton" onClick={() => toast.success(alternativa)}>
-    //             DEBUG
-    //         </button>
-    //     </div>
-    // </main>
   )
   }

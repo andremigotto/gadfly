@@ -1,15 +1,10 @@
 import Link from "next/link";
 import { useRouter } from 'next/router'
 
-
-
 const animacao = () => {
   document.getElementById("materia").src='/PH_icone.gif'
   setTimeout(() =>document.getElementById("materia").src='/PH_icone_parado.png', 1000)
 }
-
-
-
 
 export default function HomePage({ materia }) {
   return (
@@ -28,7 +23,9 @@ export default function HomePage({ materia }) {
           <button className="cartao-materia-selector"><h2 className="testo-materia">Isomeria</h2></button>
           <button className="cartao-materia-selector"><h2 className="testo-materia">Química Nuclear</h2></button>
           <button className="cartao-materia-selector"><h2 className="testo-materia">Química Inorganica</h2></button>
-          <button className="cartao-materia-selector"><h2 className="testo-materia">Voltar</h2></button>
+          <Link href="/">
+            <button className="cartao-materia-selector"><h2 className="testo-materia">Voltar</h2></button>
+          </Link>
         </div>
         <div className="Cartao-divisoria"></div>
         <div className="Cartao-xp">
@@ -43,5 +40,3 @@ export default function HomePage({ materia }) {
 
   )
 }
-
-//import Link from "next/link";

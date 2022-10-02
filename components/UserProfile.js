@@ -14,8 +14,8 @@ function Mudafoto_normal() {
 }
 }
 
-
 export default function UserProfile({ user }) {
+  const localizacao = user.cidade + ", " + user.estado + ", " + user.pais
     return (
       <div className="caixona">
         <div className="caixa-escura-vertical"></div>
@@ -27,9 +27,10 @@ export default function UserProfile({ user }) {
                 <div class="item item-1"><div class="box_image_perfil"><img src={'/Normal.png'} id="perfil" className="card-img-center"/><img src={'/Scouter.png'} id="perfil_cosmetico" className="card-img-cosmetico"/></div></div>
                 <div class="item item-2"><h1>{user.displayName}</h1></div>
                 <div class="item item-3"></div>
-                <div class="item item-4"><h3><img src={'/brasil_icon.png'} className="pais_icon"/> Atibaia, São Paulo, Brasil</h3></div>
+                <div class="item item-4"><h3><img src={'/brasil_icon.png'} className="pais_icon"/>{localizacao}</h3></div>
                 <div class="item item-5"></div>
-                <div class="item item-6"><div className="descritor-profile">Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem</div></div>
+                <div class="item item-6"><div className="descritor-profile">{user.bio}</div>
+                </div>
               </section>
             </div>
 
