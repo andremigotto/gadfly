@@ -1,7 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap');
 
-::-webkit-scrollbar {
+body::-webkit-scrollbar {
   display: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  display:block;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #00000003; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #74bec195; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #55a3a69c; 
 }
 
 :root {
@@ -17,7 +40,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Noto Sans', sans-serif;
-  background-color: var(--color-bg);
+  background-color: #516091;
   color: var(--color-text);
   margin-top: 50px;
 }
@@ -281,7 +304,7 @@ input[type="file"] {
 
 .hidden { display:  none; }
 
- /*UserProfile.js*/ 
+ /*CSS do componente UserProfile.js*/ 
 
 .pais_icon{
   max-width: 30px;
@@ -310,6 +333,7 @@ input[type="file"] {
   width: 42px;
   height: auto;
   background: rgba(0, 0, 0, 0.06);
+  box-shadow: inset 0px -30px 0px rgba(119, 173, 147, 1);
 }
 
 .caixa-escura-horizontal {
@@ -317,6 +341,14 @@ input[type="file"] {
   height: 70px;
   background: rgba(0, 0, 0, 0.06);
 }
+
+.caixa-escura-horizontal-baixo {
+  width: auto;
+  height: 70px;
+  background: rgba(0, 0, 0, 0.06);
+  box-shadow: inset 0px -30px 0px rgba(119, 173, 147, 1);
+}
+
 
 .caixa-sombra-escura-horizontal {
   width: auto;
@@ -358,7 +390,7 @@ input[type="file"] {
   height: 100%;
   background: rgba(0, 0, 0, 0.06);
   border-style: none;
-  overflow: auto;
+  overflow: hidden;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.30);
 }
 
@@ -404,10 +436,9 @@ input[type="file"] {
 
 .scroll-container{
   overflow: auto;
-  height: 210px;
+  height: 250px;
 }
 
-/* Grid */
 .grid {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -454,4 +485,89 @@ input[type="file"] {
   grid-row-end: 5;
 	grid-column-start: 2;
 	grid-column-end: 2;
+}
+
+/* CSS da page Index.js */
+
+.menu-background{
+  top: 10%;
+  left: 0%;
+  width: 100%;
+  background-color: #516091;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+}
+
+.menu-box-imagem-materia{
+  align-self: center;
+  width: 200px;
+  height: 260px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.Cartao{
+  display: flex;
+  text-align:center;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.Cartao-divisoria{
+  position: relative;
+  display: flex;
+  width: 100px;
+  height: 260px;
+  background: #74BEC1;
+  box-shadow: inset 0px -30px 0px rgba(100, 163, 166, 1), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.Cartao-materias{
+  position: relative;
+  display: inline-block;
+  width: 500px;
+  height: 250px;
+  background: #ADEBBE;
+  box-shadow: inset 0px -20px 0px rgba(149, 202, 163, 1), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.Cartao-xp{
+  position: relative;
+  display: inline-block;
+  align-items: center;
+  width: 500px;
+  height: 250px;
+  background: #ADEBBE;
+  box-shadow: inset 0px -20px 0px rgba(149, 202, 163, 1), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.cartao-materia-selector{
+  width: 480px;
+  height: 34px;
+  margin: 10px;
+  background: rgba(140, 203, 173, 0.75);
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+.cartao-xp-selector{
+  width: 480px;
+  height: auto;
+  margin: 8px;
+  border-radius: 20%;
+  background: #D9D9D9;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+.testo-materia{
+  cursor: pointer;
+}
+
+.xp-porcentagem{
+  cursor: default;
 }
