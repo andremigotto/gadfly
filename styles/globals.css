@@ -511,7 +511,6 @@ input[type="file"] {
 
 .Cartao{
   display: flex;
-  text-align:center;
   align-content: center;
   align-items: center;
   justify-content: center;
@@ -570,4 +569,109 @@ input[type="file"] {
 
 .xp-porcentagem{
   cursor: default;
+}
+
+
+/* CSS da page exam.js */
+
+
+.explicacao_pergunta{
+  width: 480px;
+  height: 200px;
+  margin: 8px;
+  border-radius: 5%;
+  background: rgba(140, 203, 173, 0.75);
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.Cartao-alternativas{
+  position: relative;
+  display: inline-block;
+  width: 500px;
+  height: 250px;
+  background: #ADEBBE;
+  box-shadow: inset 0px -20px 0px rgba(149, 202, 163, 1), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.cartao-alternativas-selector{
+  width: 480px;
+  height: 24px;
+  margin: 10px;
+  background: rgba(140, 203, 173, 0.75);
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-align:left;
+}
+
+.cartao-alternativas-selector:hover{
+  width: 480px;
+  height: 24px;
+  margin: 10px;
+  background: rgba(118, 170, 145, 0.75);
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-align:left;
+}
+
+.testo-alternativas{
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 8px;
+}
+
+.testo-explicacao{
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+}
+
+.anuncio-alternativas{
+  margin-left: 10px;
+  color:#516092;
+  text-align:left;
+}
+
+.pergunta-box{
+  display: flex;
+  align-self: center;
+  width: 800px;
+  height: 260px;
+  margin: 30px;
+  background-color: #8CCBAD;
+  box-shadow: inset 0px -12px 0px #76ab91;
+}
+
+.pergunta-box-img-area{
+  width: 300px;
+  height: 228px;
+  margin-top: 10px;
+  margin-left: 20px;
+  background-color: #ffffff;
+  box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.pergunta-box-text-area{
+  width: 500px;
+  height: 248px;
+}
+
+.pergunta-box-text{
+  margin-top: 10px;
+  margin-left: 50px;
+  width: 400px;
+  height: 228px;
+  background-color: #ffffff;
+  box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.15);
+  font-weight: bold;
+  text-align: center;
+}
+
+.botao-confirmar-resposta{
+  position: relative;
+  margin-left: 6%;
+  height: 35px;
+  box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.15);
+  font-size: 24px;
+  align-self: center;
+  margin-bottom: 50px;
+  background:rgba(100, 163, 166, 1);
 }
