@@ -1,6 +1,5 @@
 import toast from "react-hot-toast";
 import { getMateria } from "../lib/firebase";
-import Button from 'react-bootstrap/Button';
 
 export async function getServerSideProps({ query }) {
   const { materias } = query;
@@ -52,18 +51,18 @@ export default function ExamPage({ questoes, respostas }) {
     <main>
       <div className="box-center">
         <h3>{listaPerguntas}</h3>
-            <Button variant="outline-primary" active onClick={() => alternativa = validaResposta(0, "a")}>
+            <button variant="outline-primary" active onClick={() => alternativa = validaResposta(0, "a")}>
               {listaResposta[contadorAlternativas ++]}
-            </Button>
-            <Button variant="outline-primary" active onClick={() => alternativa = validaResposta(1, "b")}>
+            </button>
+            <button variant="outline-primary" active onClick={() => alternativa = validaResposta(1, "b")}>
               {listaResposta[contadorAlternativas ++]}
-            </Button>
-            <Button variant="outline-primary" active onClick={() => alternativa = validaResposta(2, "c")}>
+            </button>
+            <button variant="outline-primary" active onClick={() => alternativa = validaResposta(2, "c")}>
               {listaResposta[contadorAlternativas ++]}
-            </Button>
-            <Button variant="outline-primary" active onClick={() => alternativa = validaResposta(3, "d")}>
+            </button>
+            <button variant="outline-primary" active onClick={() => alternativa = validaResposta(3, "d")}>
               {listaResposta[contadorAlternativas ++]}
-            </Button>
+            </button>
             <button id="specialbutton" onClick={() => toast.success(alternativa)}>
                 DEBUG
             </button>
