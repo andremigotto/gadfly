@@ -3,11 +3,9 @@ import { useRouter } from 'next/router'
 
 
 
-const animacao = (path) => {
+const animacao = () => {
   document.getElementById("materia").src='/PH_icone.gif'
   setTimeout(() =>document.getElementById("materia").src='/PH_icone_parado.png', 1000)
-  //const Router = useRouter()
-  //Router.push(path)
 }
 
 
@@ -19,12 +17,14 @@ export default function HomePage({ materia }) {
 
 
       <img src={'/PH_icone_parado.png'} id="materia" className="menu-box-imagem-materia"
-      onClick={() => animacao("/chapter")}/>
+      onClick={() => animacao()}/>
 
       
       <div className="Cartao">
         <div className="Cartao-materias">
-          <button className="cartao-materia-selector"><h2 className="testo-materia">PH</h2></button>
+          <Link href="/exam">
+            <button className="cartao-materia-selector"><h2 className="testo-materia">PH</h2></button>
+          </Link>
           <button className="cartao-materia-selector"><h2 className="testo-materia">Isomeria</h2></button>
           <button className="cartao-materia-selector"><h2 className="testo-materia">Química Nuclear</h2></button>
           <button className="cartao-materia-selector"><h2 className="testo-materia">Química Inorganica</h2></button>
