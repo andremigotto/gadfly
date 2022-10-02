@@ -1,6 +1,3 @@
-import $ from "jquery"
-import ScrollContainer from 'react-indiana-drag-scroll'
-
 function Mudafoto_normal() {
   if(aparencia_fullset_nove_azul.checked){
     document.getElementById("perfil").src='/Nove_azul.png';
@@ -87,22 +84,25 @@ export default function UserProfile({ user }) {
             <div>
             <div className="aparencia-box">
             <h1>Fullset - Søren Peter</h1>
+            <h5>Recompensa por "Da cerveja ao acido" - Consiga pontuação maxima na materia de PH</h5>
             <img src={'/Soren_Peter_icon.png'} className="aparencia_icon"/>
             <input type="checkbox" id="aparencia_fullset_soren_peter" name="soren_peter" onChange={Mudafoto_normal}></input>
             </div>
             </div>
             </div>
-            <div>
-            <img src={'/Updown.png'} className="scroll_icon"/>
-            </div>
+
 
             <div className="barra-branca"></div>
 
 
-            <div className="caixa-escura-horizontal"></div>
+            <div className="caixa-escura-horizontal-baixo"></div>
           </div>
 
         <div className="caixa-escura-vertical"></div>
       </div>
     );
   }
+
+  //<div>
+  //<img src={'/Updown.png'} className="scroll_icon"/>
+  //</div>
