@@ -47,10 +47,12 @@ function UsernameForm() {
     // Create refs for both documents
     const userDoc = firestore.doc(`users/${user.uid}`);
     const usernameDoc = firestore.doc(`usernames/${formValue}`);
+    const points = 0
+    const bio = ""
 
     // Commit both docs together as a batch write.
     const batch = firestore.batch();
-    batch.set(userDoc, { username: formValue, photoURL: user.photoURL, displayName: user.displayName });
+    batch.set(userDoc, { username: formValue, photoURL: user.photoURL, displayName: user.displayName, points: user.points, bio: user.bio  });
     batch.set(usernameDoc, { uid: user.uid });
 
     await batch.commit();

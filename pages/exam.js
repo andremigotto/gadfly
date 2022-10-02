@@ -1,5 +1,6 @@
 import toast from "react-hot-toast";
 import { getMateria } from "../lib/firebase";
+import Button from 'react-bootstrap/Button';
 
 export async function getServerSideProps({ query }) {
   const { materias } = query;
@@ -38,29 +39,35 @@ export default function ExamPage({ questoes, respostas }) {
   let contadorAlternativas = 0
   let listaPerguntas = questoes[contador]
   let listaResposta = Object.keys(respostas[subContador])
-  let alternativaEscolhida = null
   let listaValidacao = Object.values(respostas[subContador])
+  let alternativa = null
+
+  function validaResposta(resposta, id) {
+    if(listaValidacao[resposta] == true) {
+      return true
+    }
+  }
 
   return (
     <main>
       <div className="box-center">
-        <p>{listaPerguntas}</p>
-        <button onClick={() => alternativaEscolhida = 0}>
-          {listaResposta[contadorAlternativas ++]}
-        </button>
-        <button onClick={() => alternativaEscolhida = 1}>
-          {listaResposta[contadorAlternativas ++]}
-        </button>
-        <button onClick={() => alternativaEscolhida = 2}>
-          {listaResposta[contadorAlternativas ++]}
-        </button>
-        <button onClick={() => alternativaEscolhida = 3}>
-          {listaResposta[contadorAlternativas ++]}
-        </button>
-        <button onClick={() => toast.success(alternativaEscolhida)}>
-         <a>LOG</a>
-        </button>
-      </div>
+        <h3>{listaPerguntas}</h3>
+            <Button variant="outline-primary" active onClick={() => alternativa = validaResposta(0, "a")}>
+              {listaResposta[contadorAlternativas ++]}
+            </Button>
+            <Button variant="outline-primary" active onClick={() => alternativa = validaResposta(1, "b")}>
+              {listaResposta[contadorAlternativas ++]}
+            </Button>
+            <Button variant="outline-primary" active onClick={() => alternativa = validaResposta(2, "c")}>
+              {listaResposta[contadorAlternativas ++]}
+            </Button>
+            <Button variant="outline-primary" active onClick={() => alternativa = validaResposta(3, "d")}>
+              {listaResposta[contadorAlternativas ++]}
+            </Button>
+            <button id="specialbutton" onClick={() => toast.success(alternativa)}>
+                DEBUG
+            </button>
+        </div>
     </main>
   )
-}
+  }
