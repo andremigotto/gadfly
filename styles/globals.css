@@ -91,13 +91,13 @@ code {
 .navbar {
   height: 70px;
   width: 100%;
-  background: white;
+  background: #74BEC1;
+  box-shadow: inset 0px -5px 0px rgba(100, 163, 166, 1), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   color: var(--colors-text);
   position: fixed;
   top: 0;
   padding: 0 10vw;
   font-weight: bold;
-  border-bottom: 1px solid var(--color-gray);
   z-index: 99;
 }
 
@@ -574,6 +574,9 @@ input[type="file"] {
 
 /* CSS da page exam.js */
 
+pergunta1:focus {
+  background: pink !important;
+}
 
 .explicacao_pergunta{
   width: 480px;

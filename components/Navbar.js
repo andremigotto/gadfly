@@ -7,7 +7,6 @@ import { auth } from '../lib/firebase';
 // Top navbar
 export default function Navbar() {
   const { user, username } = useContext(UserContext);
-
   const router = useRouter();
 
   const signOut =  () => {
@@ -20,7 +19,7 @@ export default function Navbar() {
       <ul>
         <li>
           <Link href="/">
-            <button className="btn-logo">Gadfly</button>
+            <img src={'./Logo.png'}/>
           </Link>
         </li>
 
@@ -31,7 +30,7 @@ export default function Navbar() {
             </li>
             <li>
               <Link href={`/${username}`}>
-                <button className="btn-blue">Perfil</button>
+                <button className="btn">Perfil</button>
               </Link>
             </li>
             <li>
@@ -40,7 +39,7 @@ export default function Navbar() {
               </Link>
             </li>
             <li className="push-right">
-                <p className="btn-blue">{user.displayName}</p>
+                <p className="">{user.points}</p>
             </li>
           </>
         )}
