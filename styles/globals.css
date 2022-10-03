@@ -617,7 +617,7 @@ pergunta1:focus {
 .cartao-alternativas-selector:focus{
   width: 480px;
   height: 24px;
-  background: rgba(118, 170, 145, 0.75);
+  background: rgba(73, 121, 98, 0.719);
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   text-align:left;
 }
