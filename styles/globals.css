@@ -675,3 +675,23 @@ input[type="file"] {
   margin-bottom: 50px;
   background:rgba(100, 163, 166, 1);
 }
+
+
+.coin-desaparecer{
+  position: absolute;
+  right: 46%;
+  top: 50%;
+  height: 100%;
+  width: fit-content;
+  z-index:2;
+  display:none;
+}
+
+.coin-aparecer{
+  position: absolute;
+  right: 46%;
+  top: 50%;
+  height: 100%;
+  width: fit-content;
+  z-index:2;
+}

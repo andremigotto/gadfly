@@ -53,6 +53,16 @@ export default function ExamPage({ questoes, respostas }) {
   function confirmaResposta(alternativa){
     const validacao = validaResposta(alternativa)
     const textoResposta = textoResp(validacao)
+
+    animacao()
+
+    if(validacao == true) {
+      document.getElementById("coin").className='coin-aparecer'
+      document.getElementById("coin").src='/Coin.gif'
+      setTimeout(() =>document.getElementById("coin").src='', 2000)
+      setTimeout(() =>document.getElementById("coin").className='coin-desaparecer', 2000)
+    }
+
     return textoResposta
   }
 
@@ -85,7 +95,9 @@ export default function ExamPage({ questoes, respostas }) {
 
   return (
   <div className="menu-background">
-    
+  
+  <img className="coin-desaparecer" id="coin" src=""/>
+
   <div className="pergunta-box">
     <div className="pergunta-box-img-area"><img src={'/Professor_Soren_Peter_parado.png'} id="proff" className="pergunta-box-img"
       onClick={() => animacao()}/></div>
