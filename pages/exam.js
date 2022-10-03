@@ -108,10 +108,10 @@ export default function ExamPage({ questoes, respostas }) {
   <div className="Cartao">
     <div className="Cartao-alternativas">
       <h3 className="anuncio-alternativas">Alternativas</h3>
-      <div className="cartao-alternativas-selector" onClick={() => alternativa = 0}><p className="testo-alternativas">a) {listaResposta[contadorAlternativas ++]}</p></div>
-      <div className="cartao-alternativas-selector" onClick={() => alternativa = 1}><p className="testo-alternativas">b) {listaResposta[contadorAlternativas ++]}</p></div>
-      <div className="cartao-alternativas-selector" onClick={() => alternativa = 2}><p className="testo-alternativas">c) {listaResposta[contadorAlternativas ++]}</p></div>
-      <div className="cartao-alternativas-selector" onClick={() => alternativa = 3}><p className="testo-alternativas">d) {listaResposta[contadorAlternativas ++]}</p></div>
+      <button className="cartao-alternativas-selector" onClick={() => alternativa = 0}><div className="cartao-alternativas-selector-box"><p className="testo-alternativas">a) {listaResposta[contadorAlternativas ++]}</p></div></button>
+      <button className="cartao-alternativas-selector" onClick={() => alternativa = 1}><div className="cartao-alternativas-selector-box"><p className="testo-alternativas">b) {listaResposta[contadorAlternativas ++]}</p></div></button>
+      <button className="cartao-alternativas-selector" onClick={() => alternativa = 2}><div className="cartao-alternativas-selector-box"><p className="testo-alternativas">c) {listaResposta[contadorAlternativas ++]}</p></div></button>
+      <button className="cartao-alternativas-selector" onClick={() => alternativa = 3}><div className="cartao-alternativas-selector-box"><p className="testo-alternativas">d) {listaResposta[contadorAlternativas ++]}</p></div></button>
     </div>
     <div className="Cartao-divisoria">
     <Link href={"/exam"}>

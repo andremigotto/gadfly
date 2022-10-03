@@ -603,12 +603,20 @@ pergunta1:focus {
   background: rgba(140, 203, 173, 0.75);
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   text-align:left;
+  align-content: left;
 }
 
 .cartao-alternativas-selector:hover{
   width: 480px;
   height: 24px;
-  margin: 10px;
+  background: rgba(118, 170, 145, 0.75);
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-align:left;
+}
+
+.cartao-alternativas-selector:focus{
+  width: 480px;
+  height: 24px;
   background: rgba(118, 170, 145, 0.75);
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   text-align:left;
@@ -617,7 +625,7 @@ pergunta1:focus {
 .testo-alternativas{
   cursor: pointer;
   font-weight: bold;
-  margin-left: 8px;
+  font-size: medium;
 }
 
 .testo-explicacao{
@@ -697,4 +705,9 @@ pergunta1:focus {
   height: 100%;
   width: fit-content;
   z-index:2;
+}
+
+.cartao-alternativas-selector-box{
+  width: 100%;
+  text-align:left;
 }
